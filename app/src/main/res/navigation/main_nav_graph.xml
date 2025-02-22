@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.pargar.kidsevolution.view.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_passwordRecoveryFragment"
+            app:destination="@id/passwordRecoveryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.pargar.kidsevolution.view.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.pargar.kidsevolution.view.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_juegoAnimalsFragment"
+            app:destination="@id/juegoAnimals" />
+        <action
+            android:id="@+id/action_homeFragment_to_juegoFruitsFragment"
+            app:destination="@id/juegoFruits" />
+        <action
+            android:id="@+id/action_homeFragment_to_juegoObjectsFragment"
+            app:destination="@id/juegoObjects" />
+    </fragment>
+    <fragment
+        android:id="@+id/passwordRecoveryFragment"
+        android:name="com.pargar.kidsevolution.view.PasswordRecoveryFragment"
+        android:label="fragment_password_recovery"
+        tools:layout="@layout/fragment_password_recovery" />
+    <activity
+        android:id="@+id/juegoAnimals"
+        android:name="com.pargar.kidsevolution.view.JuegoAnimals"
+        android:label="fragment_juego_animals"
+        tools:layout="@layout/fragment_juego_animals" />
+    <activity
+        android:id="@+id/juegoFruits"
+        android:name="com.pargar.kidsevolution.view.JuegoFruits"
+        android:label="fragment_juego_fruits"
+        tools:layout="@layout/fragment_juego_fruits" />
+    <activity
+        android:id="@+id/juegoObjects"
+        android:name="com.pargar.kidsevolution.view.JuegoObjects"
+        android:label="fragment_juego_objects"
+        tools:layout="@layout/fragment_juego_objects" />
+</navigation>

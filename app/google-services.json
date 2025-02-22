@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "13796129711",
+    "firebase_url": "https://proysoftii-default-rtdb.firebaseio.com",
+    "project_id": "proysoftii",
+    "storage_bucket": "proysoftii.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:13796129711:android:a440614698241afeeccd5a",
+        "android_client_info": {
+          "package_name": "com.pargar.firebaseyt"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApy2W5z2NFooasFK0jZLiVXGonyR7YUE8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:13796129711:android:e3e5fc26aff68d7deccd5a",
+        "android_client_info": {
+          "package_name": "com.pargar.kidsevolution"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApy2W5z2NFooasFK0jZLiVXGonyR7YUE8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
