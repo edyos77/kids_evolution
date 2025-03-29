@@ -63,6 +63,7 @@ class LoginFragment : Fragment() {
             bLogin.setOnClickListener { handleLogin() }
             bSignUp.setOnClickListener { findNavController().navigate(R.id.action_loginFragment_to_signUpFragment) }
             bPasswordRecovery.setOnClickListener{findNavController().navigate(R.id.action_loginFragment_to_passwordRecoveryFragment)}
+            bProbar.setOnClickListener{findNavController().navigate(R.id.action_loginFragment_to_paginaInicio)}
         }
     }
 

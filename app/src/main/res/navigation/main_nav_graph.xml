@@ -19,6 +19,10 @@
         <action
             android:id="@+id/action_loginFragment_to_passwordRecoveryFragment"
             app:destination="@id/passwordRecoveryFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_paginaInicio"
+            app:destination="@id/paginaInicio"
+            app:popUpTo="@id/loginFragment" />
     </fragment>
     <fragment
         android:id="@+id/signUpFragment"
@@ -60,4 +64,9 @@
         android:name="com.pargar.kidsevolution.view.JuegoObjects"
         android:label="fragment_juego_objects"
         tools:layout="@layout/fragment_juego_objects" />
+    <fragment
+        android:id="@+id/paginaInicio"
+        android:name="com.pargar.kidsevolution.view.PaginaInicio"
+        android:label="fragment_pagina_inicio"
+        tools:layout="@layout/fragment_pagina_inicio" />
 </navigation>

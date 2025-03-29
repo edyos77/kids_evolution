@@ -1,33 +1,14 @@
 {
   "project_info": {
-    "project_number": "13796129711",
-    "firebase_url": "https://proysoftii-default-rtdb.firebaseio.com",
-    "project_id": "proysoftii",
-    "storage_bucket": "proysoftii.appspot.com"
+    "project_number": "932593886145",
+    "firebase_url": "https://kidsevolution25-default-rtdb.firebaseio.com",
+    "project_id": "kidsevolution25",
+    "storage_bucket": "kidsevolution25.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:13796129711:android:a440614698241afeeccd5a",
-        "android_client_info": {
-          "package_name": "com.pargar.firebaseyt"
-        }
-      },
-      "oauth_client": [],
-      "api_key": [
-        {
-          "current_key": "AIzaSyApy2W5z2NFooasFK0jZLiVXGonyR7YUE8"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": []
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:13796129711:android:e3e5fc26aff68d7deccd5a",
+        "mobilesdk_app_id": "1:932593886145:android:540d9d8c5ab3b41a9bc540",
         "android_client_info": {
           "package_name": "com.pargar.kidsevolution"
         }
@@ -35,7 +16,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyApy2W5z2NFooasFK0jZLiVXGonyR7YUE8"
+          "current_key": "AIzaSyA3WQgscGc8KYbHGoER1HJLIxGHPHG9bkY"
         }
       ],
       "services": {
