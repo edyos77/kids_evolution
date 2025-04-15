@@ -11,7 +11,7 @@ import javax.inject.Inject
 class FirebaseAuthRepositoryImpl @Inject constructor(private val firebaseAuth: FirebaseAuth ):
     AuthRepository {
 
-
+/*
     override suspend fun login(email: String, password: String): Boolean {
         return try {
             var isSuccessful: Boolean = false
@@ -25,7 +25,18 @@ class FirebaseAuthRepositoryImpl @Inject constructor(private val firebaseAuth: F
             Log.d("test", e.toString())
             false
         }
+    }*/
+
+    override suspend fun login(email: String, password: String): Boolean {
+        return try {
+            val result = firebaseAuth.signInWithEmailAndPassword(email, password).await()
+            result.user != null // o simplemente true
+        } catch (e: Exception) {
+            Log.d("LoginError", "Login falló: ${e.localizedMessage}")
+            false
+        }
     }
+
 
     override suspend fun signUp(
         email: String, password: String, nomPadre: String, nomHijo: String,
