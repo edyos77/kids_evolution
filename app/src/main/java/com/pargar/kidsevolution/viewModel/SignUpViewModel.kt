@@ -21,9 +21,9 @@ class SignUpViewModel @Inject constructor(
     val signUpState: LiveData<Resource<Boolean>>
         get() = _signUpState
 
-    fun signUp(email: String, password: String, nomPadre: String, nomHijo: String, apellidos: String, cedula: String, telefono: String,edad: String) {
+    fun signUp(email: String, password: String, password2: String, nomPadre: String, nomHijo: String, apellidos: String, cedula: String, telefono: String,edad: String) {
         viewModelScope.launch {
-            signUpUseCase(email, password, nomPadre, nomHijo, apellidos, cedula, telefono,edad).onEach { state ->
+            signUpUseCase(email, password, password2, nomPadre, nomHijo, apellidos, cedula, telefono,edad).onEach { state ->
                 _signUpState.value = state
             }.launchIn(viewModelScope)
         }

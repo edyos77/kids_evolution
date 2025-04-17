@@ -22,4 +22,8 @@
     <string name="menu_slideshow">Slideshow</string>
     <string name="title_activity_main2">MainActivity2</string>
     <string name="augmented_reality">Augmented Reality</string>
+    <string name="back_button_description">Back</string>
+    <string name="title_activity_vocabulary">vocabulary</string>
+    <string name="back_button">Ir atrás</string>
+
 </resources>

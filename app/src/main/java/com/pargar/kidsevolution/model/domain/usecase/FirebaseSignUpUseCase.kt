@@ -12,7 +12,7 @@ class FirebaseSignUpUseCase @Inject constructor(
 ) {
 
     suspend operator fun invoke(
-        email: String, password: String, nomPadre: String, nomHijo: String,
+        email: String, password: String, password2: String, nomPadre: String, nomHijo: String,
         apellidos: String, cedula: String, telefono: String, edad: String
     ): Flow<Resource<Boolean>> = flow {
         emit(Resource.Loading)
@@ -23,7 +23,7 @@ class FirebaseSignUpUseCase @Inject constructor(
                         if (isValidTelefono(telefono)) {
                             if (isValidEdad(edad)) {
                                 if (isValidEmail(email)) {
-                                    if (isValidPassword(password)) {
+                                    if (isValidPassword(password, password2)) {
                                         val isSignUpSuccessfully = authRepository.signUp(email, password, nomPadre, nomHijo, apellidos, cedula, telefono, edad)
                                         if (isSignUpSuccessfully) {
                                             emit(Resource.Success(true))
@@ -31,7 +31,7 @@ class FirebaseSignUpUseCase @Inject constructor(
                                             emit(Resource.Error("Fallo en el registro. Por favor inténtelo más tarde."))
                                         }
                                     } else {
-                                        emit(Resource.Error("Formato de contraseña inválido. La contraseña debe contener al menos 8 caracteres, 1 letra y un número."))
+                                        emit(Resource.Error(passwordErrorMessage(password, password2)))
                                     }
                                 } else {
                                     emit(Resource.Error("Correo inválido"))
@@ -61,10 +61,14 @@ class FirebaseSignUpUseCase @Inject constructor(
         return Patterns.EMAIL_ADDRESS.matcher(email).matches()
     }
 
-    private fun isValidPassword(password: String): Boolean {
+    private fun isValidPassword(password: String, password2: String): Boolean {
         // Aquí puedes implementar la lógica para verificar si el formato de la contraseña es válido
         val passwordPattern = "^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$".toRegex()
-        return passwordPattern.matches(password)
+        return password == password2 && passwordPattern.matches(password)
+    }
+    private fun passwordErrorMessage(password: String, password2: String): String {
+        if (password != password2) return "Las contraseñas no coinciden."
+        return "La contraseña debe tener al menos 8 caracteres, una mayúscula, una minúscula, un número y un carácter especial."
     }
 
     private fun isValidName(name: String): Boolean {

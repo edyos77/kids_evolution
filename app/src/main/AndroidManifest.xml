@@ -13,8 +13,11 @@
         android:roundIcon="@drawable/ic_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.FirebaseYT">
-
-
+        <activity
+            android:name=".vocabulary"
+            android:exported="false"
+            android:label="@string/title_activity_vocabulary"
+            android:theme="@style/Theme.FirebaseYT" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

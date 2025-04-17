@@ -284,6 +284,55 @@
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
 
+        <LinearLayout
+            android:id="@+id/parentDataLayout6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/parentDataLayout5"
+            tools:ignore="MissingConstraints">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilConfirmPassword"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Confirmar contraseña"
+                app:passwordToggleEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etConfirmPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:inputType="textPassword" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/bSignUp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:paddingVertical="14dp"
+            android:text="@string/login__signup_button"
+            app:layout_constraintTop_toBottomOf="@+id/parentDataLayout6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/pbSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/bSignUp"
+            app:layout_constraintEnd_toEndOf="@id/bSignUp"
+            app:layout_constraintStart_toStartOf="@id/bSignUp"
+            app:layout_constraintTop_toTopOf="@id/bSignUp" />
+        <!--
         <Button
             android:id="@+id/bSignUp"
             android:layout_width="0dp"
@@ -305,6 +354,7 @@
             app:layout_constraintEnd_toEndOf="@id/bSignUp"
             app:layout_constraintStart_toStartOf="@id/bSignUp"
             app:layout_constraintTop_toTopOf="@id/bSignUp" />
+            -->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

@@ -6,7 +6,4 @@ interface AuthRepository {
 
     suspend fun signUp(email: String, password: String, nomPadre: String, nomHijo: String, apellidos: String, cedula: String, telefono: String, edad: String): Boolean
 
-
-
-
 }

@@ -21,7 +21,8 @@ class LoginFragment : Fragment() {
     private val binding get() = _binding!!
     private val viewModel: LoginViewModel by viewModels()
 
-    //acceder a las vistas y recursos definidos en el diseño del fragmento y para interactuar con ellos en el código del fragmento.
+    // acceder a las vistas y recursos definidos en el diseño del fragmento y
+    // para interactuar con ellos en el código del fragmento.
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -42,7 +43,8 @@ class LoginFragment : Fragment() {
             when(state) {
                 is Resource.Success -> {
                     handleLoading(isLoading = false)
-                    findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
+                    //findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
+                    findNavController().navigate(R.id.action_loginFragment_to_paginaInicio)
                 }
                 is Resource.Error -> {
                     handleLoading(isLoading = false)

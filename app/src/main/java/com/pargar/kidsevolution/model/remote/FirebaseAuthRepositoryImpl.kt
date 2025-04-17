@@ -37,8 +37,38 @@ class FirebaseAuthRepositoryImpl @Inject constructor(private val firebaseAuth: F
         }
     }
 
-
     override suspend fun signUp(
+        email: String, password: String, nomPadre: String, nomHijo: String,
+        apellidos: String, cedula: String, telefono: String, edad: String
+    ): Boolean {
+        return try {
+            // Registrar el usuario con Firebase Authentication
+            val authResult = firebaseAuth.createUserWithEmailAndPassword(email, password).await()
+            val userId = authResult.user?.uid ?: return false
+
+            // Mapa de datos a guardar
+            val map = mapOf(
+                "Correo" to email,
+                "NombrePadre" to nomPadre,
+                "NombreHijo" to nomHijo,
+                "Apellidos" to apellidos,
+                "Cedula" to cedula,
+                "Telefono" to telefono,
+                "Edad" to edad
+            )
+
+            // Guardar en Firebase Realtime Database
+            val mData: DatabaseReference = FirebaseDatabase.getInstance().getReference()
+            mData.child("usuarios").child(userId).setValue(map).await()
+
+            true
+        } catch (e: Exception) {
+            e.printStackTrace()
+            false
+        }
+    }
+
+/*    override suspend fun signUp(
         email: String, password: String, nomPadre: String, nomHijo: String,
         apellidos: String, cedula: String, telefono: String, edad: String
     ): Boolean {
@@ -64,13 +94,13 @@ class FirebaseAuthRepositoryImpl @Inject constructor(private val firebaseAuth: F
 
                 val userId = firebaseAuth.currentUser?.uid
                 userId?.let { uid ->
-                    mData.child("Users").child(uid).setValue(map)
+                    mData.child("usuarios").child(uid).setValue(map)
                 }
             }
             isSuccessful
         } catch (e: Exception) {
             false
         }
-    }
+    }*/
 
 }
