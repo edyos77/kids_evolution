@@ -25,5 +25,7 @@
     <string name="back_button_description">Back</string>
     <string name="title_activity_vocabulary">vocabulary</string>
     <string name="back_button">Ir atrás</string>
+    <string name="title_activity_ar">ArActivity</string>
+    <string name="title_activity_reality">Reality</string>
 
 </resources>

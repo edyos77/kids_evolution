@@ -81,5 +81,15 @@
         <action
             android:id="@+id/action_paginaInicio_to_loginFragment"
             app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_paginaInicio_to_reality"
+            app:destination="@id/reality" />
     </fragment>
+
+    <fragment
+        android:id="@+id/reality"
+        android:name="com.pargar.kidsevolution.view.Reality"
+        android:label="Realidad Aumentada"
+        tools:layout="@layout/fragment_reality" />
+
 </navigation>

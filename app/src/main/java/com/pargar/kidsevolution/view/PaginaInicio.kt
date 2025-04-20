@@ -1,11 +1,12 @@
 package com.pargar.kidsevolution.view
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageButton
+
 import androidx.navigation.fragment.findNavController
 import com.pargar.kidsevolution.R
 import com.pargar.kidsevolution.databinding.FragmentPaginaInicioBinding
@@ -39,9 +40,12 @@ class PaginaInicio : Fragment() {
                 findNavController().navigate(R.id.action_paginaInicio_to_loginFragment)}
             btnMiniGames.setOnClickListener{
                 findNavController().navigate(R.id.action_paginaInicio_to_homeFragment3)}
-            //bPlayFruits.setOnClickListener { findNavController().navigate(R.id.action_homeFragment_to_juegoFruitsFragment)}
-            //bPlayAnimals.setOnClickListener { findNavController().navigate(R.id.action_homeFragment_to_juegoAnimalsFragment)}
-            //bPlayObject.setOnClickListener { findNavController().navigate(R.id.action_homeFragment_to_juegoObjectsFragment)}
+            //btnAR.setOnClickListener{
+            //    findNavController().navigate(R.id.action_paginaInicio_to_reality)}
+            btnAR.setOnClickListener {
+                findNavController().navigate(R.id.action_paginaInicio_to_reality)
+            }
+
         }
     }
 
